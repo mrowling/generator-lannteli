@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Scaffold out a front-end web app",
   "license": "BSD",
-  "repository": "yeoman/generator-lannteli",
+  "repository": "mrowling/generator-lannteli",
   "author": "Mitchell Rowling",
   "main": "app/index.js",
   "scripts": {
