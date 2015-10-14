@@ -1,7 +1,7 @@
 {
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^6.0.2",
+    "autoprefixer": "^6.0.3",
     "grunt": "^0.4.5",
 <% if (useBabel) { -%>
     "grunt-babel": "^5.0.0",
@@ -31,12 +31,14 @@
     "grunt-postcss": "^0.6.0",
 <% if (includeSass) { -%>
     "grunt-sass": "^1.0.0",
+    "node-sass": "^3.3.2",
 <% } -%>
     "grunt-svgmin": "^2.0.1",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
-    "time-grunt": "^1.1.0"
+    "time-grunt": "^1.1.0",
+    "pixrem": "^2.0.1",
   },
   "engines": {
     "node": ">=0.10.0"
