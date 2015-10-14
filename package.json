@@ -1,10 +1,10 @@
 {
-  "name": "generator-lannteli",
+  "name": "generator-webapp",
   "version": "1.1.0",
   "description": "Scaffold out a front-end web app",
   "license": "BSD",
-  "repository": "mrowling/generator-lannteli",
-  "author": "Mitchell Rowling",
+  "repository": "yeoman/generator-webapp",
+  "author": "Yeoman",
   "main": "app/index.js",
   "scripts": {
     "test": "mocha --reporter spec"

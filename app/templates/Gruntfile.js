@@ -223,8 +223,7 @@ module.exports = function (grunt) {
           // Add vendor prefixed styles
           require('autoprefixer')({
             browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
-          }),
-          require('pixrem')(),
+          })
         ]
       },
       dist: {
