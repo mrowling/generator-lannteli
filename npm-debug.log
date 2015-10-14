@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'd:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'd:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.3
+3 info using node@v4.1.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'e:\\Websites\\sandbox\\generator-lannteli',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\Mitchell\\AppData\\Roaming\\npm-cache\\generator-webapp\\1.1.0\\package.tgz',
+9 verbose tar pack   'e:\\Websites\\sandbox\\generator-lannteli' ]
+10 verbose tarball C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package.tgz
+11 verbose folder e:\Websites\sandbox\generator-lannteli
+12 info prepublish generator-webapp@1.1.0
+13 verbose addLocalTarball adding from inside cache C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package.tgz
+14 silly cache afterAdd generator-webapp@1.1.0
+15 verbose afterAdd C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package\package.json written
+17 silly publish { name: 'generator-webapp',
+17 silly publish   version: '1.1.0',
+17 silly publish   description: 'Scaffold out a front-end web app',
+17 silly publish   license: 'BSD',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/yeoman/generator-webapp.git' },
+17 silly publish   author: { name: 'Yeoman' },
+17 silly publish   main: 'app/index.js',
+17 silly publish   scripts: { test: 'mocha --reporter spec' },
+17 silly publish   files: [ 'app' ],
+17 silly publish   keywords:
+17 silly publish    [ 'yeoman-generator',
+17 silly publish      'web',
+17 silly publish      'app',
+17 silly publish      'front-end',
+17 silly publish      'h5bp',
+17 silly publish      'modernizr',
+17 silly publish      'jquery',
+17 silly publish      'grunt' ],
+17 silly publish   dependencies:
+17 silly publish    { chalk: '^1.0.0',
+17 silly publish      'generator-jasmine': '^0.2.0',
+17 silly publish      'generator-mocha': '^0.2.0',
+17 silly publish      mkdirp: '^0.5.1',
+17 silly publish      'underscore.string': '^3.1.1',
+17 silly publish      wiredep: '^2.2.2',
+17 silly publish      'yeoman-generator': '^0.20.1',
+17 silly publish      yosay: '^1.0.4' },
+17 silly publish   devDependencies: { 'grunt-cli': '^0.1.13', mocha: '*', 'yeoman-assert': '^2.0.0' },
+17 silly publish   readme: '# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-webapp)\n\n[Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app.\n\n![](http://i.imgur.com/uKTT2Hj.png)\n\n## Features\n\n* CSS Autoprefixing\n* Built-in preview server with LiveReload\n* Automagically compile ES6 (with Babel) & Sass\n* Automagically lint your scripts\n* Automagically wire up your Bower components with [grunt-wiredep](#third-party-dependencies).\n* Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)\n* Mocha Unit Testing with PhantomJS\n* Bootstrap for Sass (Optional)\n* Leaner Modernizr builds (Optional)\n\nFor more information on what `generator-webapp` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json) used in our `package.json`.\n\n\n## Getting Started\n\n- Install: `npm install -g generator-webapp`\n- Run: `yo webapp`\n- Run `grunt` for building and `grunt serve` for preview[\\*](#grunt-serve-note). `--allow-remote` option for remote access.\n\n\n#### Third-Party Dependencies\n\n*(HTML/CSS/JS/Images/etc)*\n\nThird-party dependencies are managed with [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep). Add new dependencies using **Bower** and then run the **Grunt** task to load them:\n\n```sh\n$ bower install --save jquery\n$ grunt wiredep\n```\n\nThis works if the package author has followed the [Bower spec](https://github.com/bower/bower.json-spec). If the files are not automatically added to your source code, check with the package\'s repo for support and/or file an issue with them to have it updated.\n\nTo manually add dependencies, `bower install --save depName` to get the files, then add a `script` or `style` tag to your `index.html` or another appropriate place.\n\nThe components are installed in the root of the project at `/bower_components`. To reference them from index.html, use `src="bower_components"` or `src="/bower_components"`. Treat the `bower_components` directory as if it was a sibling to `index.html`.\n\n*Testing Note*: a project checked into source control and later checked out needs to have `bower install` run from the `test` folder as well as from the project root.\n\n\n#### Grunt Serve Note\n\nNote: `grunt server` was used for previewing in earlier versions of the project, and has since been deprecated in favor of `grunt serve`.\n\n\n## Docs\n\nWe have [recipes](docs/recipes) for integrating other popular technologies like Compass.\n\n\n## Options\n\n* `--skip-install`\n\n  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.\n\n* `--test-framework=<framework>`\n\n  Either `mocha` or `jasmine`. Defaults to `mocha`.\n\n* `--no-babel`\n\n  Turn off [Babel](http://babeljs.io/) support.\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md).\n\nNote: We are regularly asked whether we can add or take away features. If a change is good enough to have a positive impact on all users, we are happy to consider it.\n\nIf not, `generator-webapp` is fork-friendly and you can always maintain a custom version which you `npm install && npm link` to continue using via `yo webapp` or a name of your choosing.\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+17 silly publish   readmeFilename: 'readme.md',
+17 silly publish   gitHead: '6a48a74eb99fcc30764c75aa0459746b7a107792',
+17 silly publish   bugs: { url: 'https://github.com/yeoman/generator-webapp/issues' },
+17 silly publish   homepage: 'https://github.com/yeoman/generator-webapp#readme',
+17 silly publish   _id: 'generator-webapp@1.1.0',
+17 silly publish   _shasum: '2c706ca92e8e053d2406e5b1bcc98bdce5224371',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name generator-webapp
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/generator-webapp
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\Mitchell\AppData\Roaming\npm-cache\generator-webapp\1.1.0\package.tgz
+25 verbose request uri https://registry.npmjs.org/generator-webapp
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 12:04:02 AM
+28 verbose request using bearer token for auth
+29 verbose request id 0d148b96acd2a286
+30 http request PUT https://registry.npmjs.org/generator-webapp
+31 http 403 https://registry.npmjs.org/generator-webapp
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '108',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 14 Oct 2015 13:04:05 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-syd1625-SYD',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1444827844.782667,VS0,VE787' }
+33 verbose request invalidating C:\Users\Mitchell\AppData\Roaming\npm-cache\registry.npmjs.org\generator-webapp on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: You do not have permission to publish 'generator-webapp'. Are you logged in as the correct user? : generator-webapp
+35 verbose stack     at makeError (d:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:263:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (d:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:251:14)
+35 verbose stack     at Request._callback (d:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:171:14)
+35 verbose stack     at Request.self.callback (d:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (d:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1073:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (d:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1019:12)
+36 verbose statusCode 403
+37 verbose pkgid generator-webapp
+38 verbose cwd e:\Websites\sandbox\generator-lannteli
+39 error Windows_NT 6.1.7601
+40 error argv "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+41 error node v4.1.0
+42 error npm  v2.14.3
+43 error code E403
+44 error You do not have permission to publish 'generator-webapp'. Are you logged in as the correct user? : generator-webapp
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
